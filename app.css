@@ -32,7 +32,6 @@ textarea {
   border-radius: 5px;
   resize: none;
   margin: 0.4rem auto 0;
-  /* border: none; */
 }
 
 input:focus-visible,
@@ -154,7 +153,7 @@ button:active {
 }
 
 .main-container {
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 6rem);
   justify-content: space-between;
 }
 
@@ -180,4 +179,63 @@ button:active {
 .description {
   margin: 0.5rem 0;
   color: #4e4e4e;
+}
+
+::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 9px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #252525;
+  padding: 1rem 1rem 0.5rem;
+  width: fit-content;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #252525;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-align: start;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
 }
