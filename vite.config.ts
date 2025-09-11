@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	root: ".",
+	base: "/typescript-miniproject-3/",
 	build: {
 		outDir: "dist",
 	},
