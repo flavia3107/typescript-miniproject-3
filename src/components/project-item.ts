@@ -8,14 +8,6 @@ export class ProjectItem extends Component<HTMLUListElement, HTMLLIElement>
   implements Draggable {
   private project: Project;
 
-  get persons() {
-    if (this.project.people === 1) {
-      return '1 person';
-    } else {
-      return `${this.project.people} persons`;
-    }
-  }
-
   constructor(hostId: string, project: Project) {
     super('single-project', hostId, false, project.id);
     this.project = project;
@@ -40,8 +32,19 @@ export class ProjectItem extends Component<HTMLUListElement, HTMLLIElement>
   }
 
   renderContent() {
-    this.element.querySelector('h2')!.textContent = this.project.title;
-    this.element.querySelector('h3')!.textContent = this.persons + ' assigned';
+    const header = this.element.querySelector('h2')!;
+    header.textContent = "";
+    const titleSpan = document.createElement("span");
+    titleSpan.textContent = this.project.title;
+    const peopleSpan = document.createElement("span");
+    peopleSpan.className = 'people-number';
+    const peopleText = document.createTextNode(`${this.project.people.toString()}  `);
+    const icon = document.createElement("img");
+    icon.src = "./people.svg";
+    peopleSpan.appendChild(icon);
+    peopleSpan.appendChild(peopleText);
+    header.appendChild(titleSpan);
+    header.appendChild(peopleSpan);
     this.element.querySelector('p')!.textContent = this.project.description;
   }
 }
