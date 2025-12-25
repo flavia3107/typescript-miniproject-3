@@ -22,7 +22,7 @@ body {
 }
 
 .main-container {
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 4.5rem);
   justify-content: space-between;
 }
 
@@ -52,42 +52,8 @@ body {
   background: transparent;
 }
 
-.logo {
+a {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #252525;
-  padding: 1rem 1rem 0.5rem;
+  margin: 0.5rem;
   width: fit-content;
-}
-
-.logo img {
-  height: 35px;
-}
-
-.logo-txt {
-  padding-left: 7px;
-  display: flex;
-  flex-direction: column;
-  color: #252525;
-}
-
-.logo-txt h1,
-.logo-txt span {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  letter-spacing: 4px;
-  text-align: start;
-}
-
-.logo-txt h1 {
-  font-weight: bolder;
-  font-size: 1.1rem;
-  margin-top: 2px;
-}
-
-.logo-txt span {
-  font-weight: lighter;
-  font-size: 0.85rem;
 }
