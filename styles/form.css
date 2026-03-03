@@ -59,6 +59,8 @@ button:active {
 
 #form {
 	width: 25rem;
+	min-width: 25rem;
+	margin-right: 2rem;
 }
 
 .form-control {

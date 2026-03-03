@@ -5,6 +5,7 @@
 	overflow: hidden;
 	box-shadow: 0 0 1.25rem -0.375rem #c7c7c7;
 	border-radius: 5px;
+	min-width: 25rem;
 }
 
 .projects header {
